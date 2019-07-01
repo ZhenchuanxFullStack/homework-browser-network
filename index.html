@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>serviceWorker</title>
+  <link rel="stylesheet" href="./css/index.css?t=2019">
+</head>
+<body>
+  <h1>hello SW</h1>
+  <div>
+    <img src="./img/1.jpg" alt="" srcset="">
+  </div>
+  <div>
+    <img src="./img/2.png" alt="" srcset="">
+  </div>
+  <div>
+    <img src="./img/3.jpg" alt="" srcset="">
+  </div>
+  <script src="/libs/jquery.js"></script>
+  <script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+      // Use the window load event to keep the page load performant
+      window.onload = function () {
+        navigator.serviceWorker.register('/sw.js');
+      }
+    }
+  </script>
+</body>
+</html>
