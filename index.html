@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Service Worker</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h2>Service Worker - demo</h2>
+    <img src="img/1.png" />
+	<img src="img/2.jpg" >
+    <script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js')
+    }
+    </script>
+</body>
+</html>
