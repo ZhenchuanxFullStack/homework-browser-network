@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+    <link rel="stylesheet" type="text/css" href="index.css"/>
+	</head>
+	<body>
+    <div id="box">test workbox</div>
+    <button id="btn" onclick="loadMainJS()">loadMainJS</button>
+    <button id="btn" onclick="loadAJS()">loadAJS</button>
+    <button id="btn" onclick="loadBJS()">loadBJS</button>
+    <script>
+      // 注册 Service Worker
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js');
+      }
+      function loadMainJS() {
+        var scriptEl = document.createElement('script')
+        scriptEl.src = './main.js'
+        document.body.appendChild(scriptEl)
+      }
+      function loadAJS() {
+        var scriptEl = document.createElement('script')
+        scriptEl.src = './a.js'
+        document.body.appendChild(scriptEl)
+      }
+      function loadBJS() {
+        var scriptEl = document.createElement('script')
+        scriptEl.src = './b.js'
+        document.body.appendChild(scriptEl)
+      }
+    </script>
+	</body>
+</html>
