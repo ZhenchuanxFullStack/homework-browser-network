@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	</head>
+	<body>
+		<div class="container">
+			<img src="https://ac-r.static.booking.cn/images/hotel/max1024x768/184/184349799.jpg"/>
+		</div>
+		
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			// Check that service workers are registered
+			if ('serviceWorker' in navigator) {
+			  // Use the window load event to keep the page load performant
+			  window.addEventListener('load', () => {
+			    navigator.serviceWorker.register('./sw.js');
+			  });
+			}
+		</script>
+	</body>
+</html>
