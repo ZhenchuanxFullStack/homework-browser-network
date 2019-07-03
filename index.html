@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Service Worker Test</title>
+  <link rel="stylesheet" href="./load-test.css">
+</head>
+<body>
+
+<img src="./load-test.jpg" alt="load-test">
+
+<script>
+  // Check that service workers are supported
+  if ('serviceWorker' in navigator) {
+    // Use the window load event to keep the page load performant
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('service-worker.js')
+    })
+  }
+</script>
+
+<script src="load-test.js"></script>
+
+</body>
+</html>
