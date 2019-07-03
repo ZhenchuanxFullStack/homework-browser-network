@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link href="css/base.css" rel="stylesheet">
+    <script src="js/base.js"></script>
+    <title>ServiceWorker</title>
+</head>
+<body>
+<img src="//oss.xiaosk.com/library/thumb/etms_nfo/2018/2018-12-05/2D86CA08BE3A45F6BA864519C14E7DA5/pic.jpg">
+
+<script>
+    // 检查浏览器支持情况
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('sw.js');
+        });
+    }
+</script>
+</body>
+</html>
