@@ -3,8 +3,8 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.3.0/workbox
 if(workbox) {
     // 静态资源缓存
     workbox.precaching([
-        '/js/test.js',
-        '/imgs/1.jpeg'
+        './js/test.js',
+        './imgs/1.jpeg'
     ])
 
     // html的缓存策略
