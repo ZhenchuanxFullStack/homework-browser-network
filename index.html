@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>web socket 实现缓存策略</title>
+
+</head>
+<body>
+
+    <ul>
+        <li>
+            <img src="http://pic37.nipic.com/20140113/8800276_184927469000_2.png" alt="">
+        </li>
+        <li>
+            <img src="imgs/1.jpeg" alt="">
+        </li>
+    </ul>
+    
+    <script>
+        if('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js');
+        }    
+    </script>
+</body>
+</html>
