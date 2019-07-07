@@ -2,7 +2,7 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.3.0/workbox-sw.js');
 if(workbox) {
     // 静态资源缓存
-    workbox.precaching.preacheAndRoute([
+    workbox.precaching([
         '/js/test.js',
         '/imgs/1.jpeg'
     ])
