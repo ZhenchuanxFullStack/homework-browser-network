@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>workbox4 test</title>
+	<link rel="stylesheet" href="./static/style.css">
+</head>
+
+<body>
+	<div>
+		<p class="a">test workbox!</p>
+		<button id="btn">fetch</button>
+		<img src="./static/logo.png">
+	</div>
+	<script src="./static/app.js"></script>
+	<script>
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', (e) => {
+				navigator.serviceWorker.register('./service-worker.js');
+			});
+		}
+		var elm_btn = document.getElementById('btn');
+		elm_btn.addEventListener('click', function (e) {
+			fetch('/api/abc').then(function (response) {
+				console.log(`fetch responsed`);
+			})
+		})
+	</script>
+</body>
+
+</html>
